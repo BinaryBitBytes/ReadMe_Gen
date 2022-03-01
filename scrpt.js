@@ -8,10 +8,25 @@ SO THAT I can quickly create a professional README for a new project
 ```md
 GIVEN a command-line application that accepts user input
 WHEN I am prompted for information about my application repository
-THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-WHEN I enter my project title
+THEN a high-quality, professional README.md is generated with the:
+- title of my project 
+- and sections entitled Description,
+- Table of Contents,
+- Installation,
+- Usage,
+- License,
+- Contributing,
+- Tests,
+- and Questions
+WHEN I enter my:
+- project title
 THEN this is displayed as the title of the README
-WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
+WHEN I enter a"
+- description, 
+- installation instructions,
+- usage information,
+- contribution guidelines,
+- and test instructions
 THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
 WHEN I choose a license for my application from a list of options
 THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
@@ -24,5 +39,68 @@ THEN I am taken to the corresponding section of the README
 ```
 */
 const inquirer = require('inquirer');
-console.log(inquirer);
-const 
+
+inquirer
+    .prompt([
+        {
+            type: 'input',
+            message: 'What is your projects name for the readme?',
+            name: 'nameProject'
+        },
+        {
+            type: 'input',
+            message: 'What is your name?',
+            name: 'nameUser',
+        },
+        {
+            type: 'input',
+            message: 'Describe your project here.',
+            name: 'projDescription',
+        },
+        {
+            type : 'input',
+            message:'Enter Intsturctions on how to install your project',
+            name: 'projInstallation'
+        },
+        {
+            type:'input' ,
+            message: 'How to use this project?',
+            name: 'projUsage',
+        },
+        {
+            type: 'input',
+            message: 'Acknowledgements to the contributing team members of this project.',
+            name: 'projContributions',
+        },
+        {
+            type: 'input' ,
+            message: 'Decribe the passing tests involved. Are there any outstanding troubles that need a resolution?',
+            name: 'projTesting'
+        },
+        {
+            type: 'input',
+            message:'',
+            name: 'projLisence',
+        },
+        {
+            type:'input',
+            message:'What is your github username?',
+            name: 'gHubUser',
+        },
+        //questions = `${gitHubUserURL}`,
+        //email = `${email}`,
+    ])
+    .then((response)=> {
+        response.confirm === response.nameUser
+            ?console.log('Readme file created!')
+            :console.log('You did not enter your name correctly!')
+    });
+    /*
+    .catch((error) => {
+        if (error) {
+
+        } else {
+
+        }
+    })*/
+
