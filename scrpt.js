@@ -39,7 +39,7 @@ THEN I am taken to the corresponding section of the README
 ```
 */
 const inquirer = require('inquirer');
-
+const fs = require('fs');
 inquirer
     .prompt([
         {
@@ -78,9 +78,10 @@ inquirer
             name: 'projTesting'
         },
         {
-            type: 'input',
-            message:'',
+            type: 'list',
+            message:'What Lisences would you like to use?',
             name: 'projLisence',
+            choices: ['none', 'MIT'],
         },
         {
             type:'input',
@@ -90,8 +91,9 @@ inquirer
         //questions = `${gitHubUserURL}`,
         //email = `${email}`,
     ])
-    .then((response)=> {
-        response.confirm === response.nameUser
+    .then((data) => {
+        const filename = `${data.nameProject}`
+        data.nameUser === data.input
             ?console.log('Readme file created!')
             :console.log('You did not enter your name correctly!')
     });
