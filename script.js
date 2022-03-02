@@ -37,11 +37,6 @@ THEN this is added to the section of the README entitled Questions, with instruc
 WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
 ```
-*/
-console.log(process.argv);
-console.log(typeof process.argv[2])
-const inquirer = require('inquirer');;
-const fs = require('fs');
 fs.readFile('data.csv', 'utf8', (error, data) =>
     error ? console.error(error) : console.log(data)
     );
@@ -49,6 +44,11 @@ fs.readFile('data.csv', 'utf8', (error, data) =>
 fs.writeFile('log.txt', process.argv[2], (err) =>
 err ? console.error(err) : console.log ('File log complete!')
 );
+*/
+console.log(process.argv);
+console.log(typeof process.argv[2])
+const inquirer = require('inquirer');;
+const fs = require('fs');
 
 inquirer
     .prompt([
