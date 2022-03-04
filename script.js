@@ -37,6 +37,12 @@ THEN this is added to the section of the README entitled Questions, with instruc
 WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
 ```
+*/
+console.log(process.argv);
+console.log(typeof process.argv[2])
+//added node modules: Inquirer and FS
+const inquirer = require('inquirer');;
+const fs = require('fs');
 fs.readFile('data.csv', 'utf8', (error, data) =>
     error ? console.error(error) : console.log(data)
     );
@@ -44,63 +50,82 @@ fs.readFile('data.csv', 'utf8', (error, data) =>
 fs.writeFile('log.txt', process.argv[2], (err) =>
 err ? console.error(err) : console.log ('File log complete!')
 );
-*/
-console.log(process.argv);
-console.log(typeof process.argv[2])
-const inquirer = require('inquirer');;
-const fs = require('fs');
 
 inquirer
     .prompt([
         {
             type: 'input',
             message: 'What is your projects name for the readme?',
-            name: 'nameProject'
+            name: 'nameProject',
+            validate: (blankInput)=>{ if (blankInput){return true} else{return `An input is needed to continue`}}
         },
         {
             type: 'input',
             message: 'What is your name?',
             name: 'nameUser',
+            validate: (blankInput)=>{ if (blankInput){return true} else{return `An input is needed to continue`}}
         },
         {
             type: 'input',
             message: 'Describe your project here.',
             name: 'projDescription',
+            validate: (blankInput)=>{ if (blankInput){return true} else{return `An input is needed to continue`}}
         },
         {
             type : 'input',
             message:'Enter Intsturctions on how to install your project',
-            name: 'projInstallation'
+            name: 'projInstallation',
+            validate: (blankInput)=>{ if (blankInput){return true} else{return `An input is needed to continue`}}
         },
         {
             type:'input' ,
             message: 'How to use this project?',
             name: 'projUsage',
+            validate: (blankInput)=>{ if (blankInput){return true} else{return `An input is needed to continue`}}
         },
         {
             type: 'input',
             message: 'Acknowledgements to the contributing team members of this project.',
             name: 'projContributions',
+            validate: (blankInput)=>{ if (blankInput){return true} else{return `An input is needed to continue`}}
         },
         {
             type: 'input' ,
             message: 'Decribe the passing tests involved. Are there any outstanding troubles that need a resolution?',
-            name: 'projTesting'
+            name: 'projTesting',
+            validate: (blankInput)=>{ if (blankInput){return true} else{return `An input is needed to continue`}}
         },
         {
             type: 'list',
             message:'What Lisences would you like to use?',
             name: 'projLisence',
             choices: ['none', 'MIT'],
+            validate: (blankInput)=>{ if (blankInput){return true} else{return `An input is needed to continue`}}
         },
         {
             type:'input',
             message:'What is your github username?',
             name: 'gHubUser',
+            validate: (blankInput)=>{ if (blankInput){return true} else{return `An input is needed to continue`}}
         },
         //questions = `${gitHubUserURL}`,
         //email = `${email}`,
-    ])
+    ]
+    ).then(({
+        title,
+        youName,
+        description,
+        instrictions,
+        howToUse,
+        contributions,
+        testing,
+        lisence,
+        git,
+        questions
+    }
+    )
+    )
+
     .then((data) => {
         const filename = `${data.nameProject}.json`;
 
