@@ -1,0 +1,19 @@
+{
+  "name": "develop7_homework_readme_nodejs",
+  "version": "1.0.0",
+  "description": "{ \t\"nameProject\": \"Readme\", \t\"nameUser\": \"Miles\", \t\"projDescription\": \"Readme\", \t\"projInstallation\": \"Install\", \t\"projUsage\": \"Use it\", \t\"projContributions\": \"Me\", \t\"projTesting\": \"A\", \t\"projLisence\": \"MIT\", \t\"gHubUser\": \"BBB\" }",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BinaryBitBytes/ReadMe_Gen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BinaryBitBytes/ReadMe_Gen/issues"
+  },
+  "homepage": "https://github.com/BinaryBitBytes/ReadMe_Gen#readme"
+}
