@@ -43,13 +43,13 @@ console.log(typeof process.argv[2])
 //added node modules: Inquirer and FS
 const inquirer = require('inquirer');;
 const fs = require('fs');
-fs.readFile('data.csv', 'utf8', (error, data) =>
+/*fs.readFile('data.csv', 'utf8', (error, data) =>
     error ? console.error(error) : console.log(data)
     );
 
 fs.writeFile('log.txt', process.argv[2], (err) =>
 err ? console.error(err) : console.log ('File log complete!')
-);
+);*/
 
 inquirer
     .prompt([
@@ -110,8 +110,8 @@ inquirer
         },
         //questions = `${gitHubUserURL}`,
         //email = `${email}`,
-    ]
-    ).then(({
+    ])
+    /*.then(({
         title,
         youName,
         description,
@@ -126,8 +126,9 @@ inquirer
     )
     )
 
-    .then((data) => {
-        const filename = `${data.nameProject}.json`;
+    */
+   .then((data) => {
+        const filename = `${data.nameProject}.md`;
 
         fs.writeFile(filename , JSON.stringify(data, null , '\t'),(err) =>
             err ? console.log(err) : console.log ('You made a readme.')
