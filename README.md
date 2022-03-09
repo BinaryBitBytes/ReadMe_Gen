@@ -1,11 +1,11 @@
 {
 	"nameProject": "Readme",
 	"nameUser": "Miles",
-	"projDescription": "ReadmeGen",
-	"projInstallation": "Git pull",
-	"projUsage": "Follow Prompts to make readme",
-	"projContributions": "me",
-	"projTesting": "none",
+	"projDescription": "Readme",
+	"projInstallation": "Install",
+	"projUsage": "Use it",
+	"projContributions": "Me",
+	"projTesting": "A",
 	"projLisence": "MIT",
-	"gHubUser": "Miles"
+	"gHubUser": "BBB"
 }
