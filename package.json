@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/BinaryBitBytes/ReadMe_Gen/issues"
   },
-  "homepage": "https://github.com/BinaryBitBytes/ReadMe_Gen#readme"
+  "homepage": "https://github.com/BinaryBitBytes/ReadMe_Gen#readme",
+  "dependencies": {
+    "inquirer": "^8.2.1"
+  }
 }

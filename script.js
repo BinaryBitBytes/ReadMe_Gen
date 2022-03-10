@@ -111,22 +111,7 @@ inquirer
         //questions = `${gitHubUserURL}`,
         //email = `${email}`,
     ])
-    /*.then(({
-        title,
-        youName,
-        description,
-        instrictions,
-        howToUse,
-        contributions,
-        testing,
-        lisence,
-        git,
-        questions
-    }
-    )
-    )
 
-    */
    .then((data) => {
         const filename = `${data.nameProject}.md`;
 
@@ -160,10 +145,16 @@ inquirer
             ${inquirer.gHubUser}
             `)
         );
-        if data.nameUser === data.input{
-            const enteredProject = `${nameProject}`;
+        if (data.nameUser === data.input){
+            const enteredProject = `${nameProjectName}`;
             const enteredUsername = `${userName}`;
-            const 
+            const enteredDescription = `${projDescription}`;
+            const enteredInstallation =`${projInstallation}`;
+            const enteredUsage = `${projUsage}`;
+            const enteredContributions = `${projContributions}`;
+            const enteredTesting = `${projTesting}`;
+            const enteredLisence = `${projLisence}`;
+            const enteredGitHub = `${gHubUser}`;
         }
             ?console.log('Readme file created!');
             :console.log('You did not enter your name correctly!');
