@@ -144,13 +144,14 @@ inquirer
             ##If you have any questions you can reach me at my GitHub.
             ${inquirer.gHubUser}
             `)
-        );
+            );
+        });
         
+        /*
         if ((response) => 
         data.nameUser === data.input
         ?console.log('Readme file created!')
-        :console.log('You did not enter your name correctly!'))
-            /*
+        :console.log('You did not enter your name correctly!')
             const enteredProject = `${nameProjectName}`;
             const enteredUsername = `${userName}`;
             const enteredDescription = `${projDescription}`;
@@ -161,4 +162,3 @@ inquirer
             const enteredLisence = `${projLisence}`;
             const enteredGitHub = `${gHubUser}`;
         */
-    });
