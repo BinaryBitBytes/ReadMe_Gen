@@ -18,5 +18,6 @@
   "homepage": "https://github.com/BinaryBitBytes/ReadMe_Gen#readme",
   "dependencies": {
     "inquirer": "^8.2.1"
-  }
+  },
+  "keywords": []
 }

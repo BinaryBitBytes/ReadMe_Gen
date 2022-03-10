@@ -145,7 +145,12 @@ inquirer
             ${inquirer.gHubUser}
             `)
         );
-        if (data.nameUser === data.input){
+        
+        if ((response) => 
+        data.nameUser === data.input
+        ?console.log('Readme file created!')
+        :console.log('You did not enter your name correctly!'))
+            /*
             const enteredProject = `${nameProjectName}`;
             const enteredUsername = `${userName}`;
             const enteredDescription = `${projDescription}`;
@@ -155,16 +160,5 @@ inquirer
             const enteredTesting = `${projTesting}`;
             const enteredLisence = `${projLisence}`;
             const enteredGitHub = `${gHubUser}`;
-        }
-            ?console.log('Readme file created!');
-            :console.log('You did not enter your name correctly!');
+        */
     });
-    /*
-    .catch((error) => {
-        if (error) {
-
-        } else {
-
-        }
-    })*/
-
