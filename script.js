@@ -40,7 +40,7 @@ THEN I am taken to the corresponding section of the README
 */
 console.log(process.argv);
 console.log(typeof process.argv[2])
-//added node modules: Inquirer and FS
+//!added node modules: Inquirer and FS
 const inquirer = require('inquirer');;
 const fs = require('fs');
 /*fs.readFile('data.csv', 'utf8', (error, data) =>
@@ -131,11 +131,23 @@ inquirer
         const filename = `${data.nameProject}.md`;
 
         fs.writeFile(filename , JSON.stringify(data, null , '\t'),(err) =>
-            err ? console.log(err) : console.log ('You made a readme.')
+            err ? console.log(err) : console.log (`You made a readme. 
+            #Name of the Project
+            ${nameProject}
+            ##User Name
+            ${nameUser}
+            ##Description of the project
+            ${projDescription}
+            
+            `);
         );
-        data.nameUser === data.input
-            ?console.log('Readme file created!')
-            :console.log('You did not enter your name correctly!')
+        if data.nameUser === data.input{
+            const enteredProject = `${nameProject}`;
+            const enteredUsername = `${userName}`;
+            const 
+        }
+            ?console.log('Readme file created!');
+            :console.log('You did not enter your name correctly!');
     });
     /*
     .catch((error) => {
