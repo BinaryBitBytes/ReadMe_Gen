@@ -133,13 +133,32 @@ inquirer
         fs.writeFile(filename , JSON.stringify(data, null , '\t'),(err) =>
             err ? console.log(err) : console.log (`You made a readme. 
             #Name of the Project
-            ${nameProject}
+            ${inquirer.nameProject}
+
             ##User Name
-            ${nameUser}
+            ${inquirer.nameUser}
+
             ##Description of the project
-            ${projDescription}
-            
-            `);
+            ${inquirer.projDescription}
+
+            ##Project Installation
+            ${inquirer.projInstallation}
+
+            ##How to use this Project?
+            ${inquirer.projUsage}
+
+            ##Project Contributors
+            ${inquirer.projContributions}
+
+            ##Testing for this Project
+            ${inquirer.projTesting}
+
+            ##Lisence
+            ${inquirer.projLisence}
+
+            ##If you have any questions you can reach me at my GitHub.
+            ${inquirer.gHubUser}
+            `)
         );
         if data.nameUser === data.input{
             const enteredProject = `${nameProject}`;
