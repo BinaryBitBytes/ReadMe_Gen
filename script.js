@@ -39,10 +39,10 @@ THEN I am taken to the corresponding section of the README
 ```
 */
 console.log(process.argv);
-console.log(typeof process.argv[2])
+console.log(typeof process.argv);
 //!added node modules: Inquirer and FS
-const inquirer = require('inquirer');;
-const fs = require('fs');
+const inquirer = require("inquirer");
+const fs = require("fs");
 /*fs.readFile('data.csv', 'utf8', (error, data) =>
     error ? console.error(error) : console.log(data)
     );
@@ -52,103 +52,211 @@ err ? console.error(err) : console.log ('File log complete!')
 );*/
 
 inquirer
-    .prompt([
-        {
-            type: 'input',
-            message: 'What is your projects name for the readme?',
-            name: 'nameProject',
-            validate: (blankInput)=>{ if (blankInput){return true} else{return `An input is needed to continue`}}
-        },
-        {
-            type: 'input',
-            message: 'What is your name?',
-            name: 'nameUser',
-            validate: (blankInput)=>{ if (blankInput){return true} else{return `An input is needed to continue`}}
-        },
-        {
-            type: 'input',
-            message: 'Describe your project here.',
-            name: 'projDescription',
-            validate: (blankInput)=>{ if (blankInput){return true} else{return `An input is needed to continue`}}
-        },
-        {
-            type : 'input',
-            message:'Enter Intsturctions on how to install your project',
-            name: 'projInstallation',
-            validate: (blankInput)=>{ if (blankInput){return true} else{return `An input is needed to continue`}}
-        },
-        {
-            type:'input' ,
-            message: 'How to use this project?',
-            name: 'projUsage',
-            validate: (blankInput)=>{ if (blankInput){return true} else{return `An input is needed to continue`}}
-        },
-        {
-            type: 'input',
-            message: 'Acknowledgements to the contributing team members of this project.',
-            name: 'projContributions',
-            validate: (blankInput)=>{ if (blankInput){return true} else{return `An input is needed to continue`}}
-        },
-        {
-            type: 'input' ,
-            message: 'Decribe the passing tests involved. Are there any outstanding troubles that need a resolution?',
-            name: 'projTesting',
-            validate: (blankInput)=>{ if (blankInput){return true} else{return `An input is needed to continue`}}
-        },
-        {
-            type: 'list',
-            message:'What Lisences would you like to use?',
-            name: 'projLisence',
-            choices: ['none', 'MIT'],
-            validate: (blankInput)=>{ if (blankInput){return true} else{return `An input is needed to continue`}}
-        },
-        {
-            type:'input',
-            message:'What is your github username?',
-            name: 'gHubUser',
-            validate: (blankInput)=>{ if (blankInput){return true} else{return `An input is needed to continue`}}
-        },
-        //questions = `${gitHubUserURL}`,
-        //email = `${email}`,
-    ])
+  .prompt([
+    Questions={
+      type: "input",
+      message: "What is your projects name for the readme?",
+      name: "nameProject",
+      validate: (blankInput) => {
+        if (blankInput) {
+          return true;
+        } else {
+          return `An input is needed to continue`;
+        }
+      },
+    },
+    {
+      type: "input",
+      message: "What is your name?",
+      name: "nameUser",
+      validate: (blankInput) => {
+        if (blankInput) {
+          return true;
+        } else {
+          return `An input is needed to continue`;
+        }
+      },
+    },
+    {
+      type: "input",
+      message: "Describe your project here.",
+      name: "projDescription",
+      validate: (blankInput) => {
+        if (blankInput) {
+          return true;
+        } else {
+          return `An input is needed to continue`;
+        }
+      },
+    },
+    {
+      type: "input",
+      message: "Enter Intsturctions on how to install your project",
+      name: "projInstallation",
+      validate: (blankInput) => {
+        if (blankInput) {
+          return true;
+        } else {
+          return `An input is needed to continue`;
+        }
+      },
+    },
+    {
+      type: "input",
+      message: "How to use this project?",
+      name: "projUsage",
+      validate: (blankInput) => {
+        if (blankInput) {
+          return true;
+        } else {
+          return `An input is needed to continue`;
+        }
+      },
+    },
+    {
+      type: "input",
+      message:
+        "Acknowledgements to the contributing team members of this project.",
+      name: "projContributions",
+      validate: (blankInput) => {
+        if (blankInput) {
+          return true;
+        } else {
+          return `An input is needed to continue`;
+        }
+      },
+    },
+    {
+      type: "input",
+      message:
+        "Decribe the passing tests involved. Are there any outstanding troubles that need a resolution?",
+      name: "projTesting",
+      validate: (blankInput) => {
+        if (blankInput) {
+          return true;
+        } else {
+          return `An input is needed to continue`;
+        }
+      },
+    },
+    {
+      type: "list",
+      message: "What Lisences would you like to use?",
+      name: "projLisence",
+      choices: ["none", "MIT"],
+      validate: (blankInput) => {
+        if (blankInput) {
+          return true;
+        } else {
+          return `An input is needed to continue`;
+        }
+      },
+    },
+    {
+      type: "input",
+      message: "What is your github username?",
+      name: "gHubUser",
+      validate: (blankInput) => {
+        if (blankInput) {
+          return true;
+        } else {
+          return `An input is needed to continue`;
+        }
+      },
+    },
+  ])
 
-   .then((data) => {
-        const filename = `${data.nameProject}.md`;
+  .then((data) => {
+    const filename = `${data.nameProject}.md`;
+    //const enteredProject = `${data.nameProjectName}`;
+    //const enteredUsername = `${data.userName}`;
+    //const enteredDescription = `${data.projDescription}`;
+    //const enteredInstallation = `${data.projInstallation}`;
+    //const enteredUsage = `${data.projUsage}`;
+    //const enteredContributions = `${data.projContributions}`;
+    //const enteredTesting = `${data.projTesting}`;
+    //const enteredLisence = `${data.projLisence}`;
+    //const enteredGitHub = `${data.gHubUser}`;
+    let __TEMPLATE__ = (
+    `#Name of the Project
+    ------------------
+    ${data.nameProjectName}
 
-        fs.writeFile(filename , JSON.stringify(data, null , '\t'),(err) =>
-            err ? console.log(err) : console.log (`You made a readme. 
-            #Name of the Project
-            ${inquirer.nameProject}
+    ##User Name
+    -----------------
+    ${data.userName}
+
+    ##Description of the project
+    -----------------
+    ${data.projDescription}
+
+    ##Project Installation
+    -----------------
+    ${data.projInstallation}
+
+    ##How to use this Project?
+    -----------------
+    ${data.projUsage}
+
+    ##Project Contributors
+    -----------------
+    ${data.projContributions}
+
+    ##Testing for this Project
+    -----------------
+    ${data.projTesting}
+
+    ##Lisence
+    -----------------
+    ${data.projLisence}
+
+    ##If you have any questions you can reach me at my GitHub.
+    -----------------
+    ${data.gHubUser}
+    `)  
+    fs.writeFile(filename, JSON.stringify(data, null, __TEMPLATE__.data), (err) =>
+      err ? console.log(err) : console.log(
+            `#Name of the Project
+            ------------------
+            ${data.nameProjectName}
 
             ##User Name
-            ${inquirer.nameUser}
+            -----------------
+            ${data.userName}
 
             ##Description of the project
-            ${inquirer.projDescription}
+            -----------------
+            ${data.projDescription}
 
             ##Project Installation
-            ${inquirer.projInstallation}
+            -----------------
+            ${data.projInstallation}
 
             ##How to use this Project?
-            ${inquirer.projUsage}
+            -----------------
+            ${data.projUsage}
 
             ##Project Contributors
-            ${inquirer.projContributions}
+            -----------------
+            ${data.projContributions}
 
             ##Testing for this Project
-            ${inquirer.projTesting}
+            -----------------
+            ${data.projTesting}
 
             ##Lisence
-            ${inquirer.projLisence}
+            -----------------
+            ${data.projLisence}
 
             ##If you have any questions you can reach me at my GitHub.
-            ${inquirer.gHubUser}
+            -----------------
+            ${data.gHubUser}
             `)
-            );
-        });
-        
-        /*
-        if ((response) => 
+    );
+  });
+
+/*
+        if ((data) => 
         data.nameUser === data.input
         ?console.log('Readme file created!')
         :console.log('You did not enter your name correctly!')
