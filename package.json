@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/BinaryBitBytes/ReadMe_Gen#readme",
   "dependencies": {
+    "bash": "^0.0.1",
+    "fs": "^0.0.1-security",
     "inquirer": "^8.2.1"
   },
   "keywords": []
