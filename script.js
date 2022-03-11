@@ -140,13 +140,13 @@ inquirer
       error ? console.error(error) : console.log(data)
     );
     //! TEMPLATE
-    const __TEMPLATE__ = `#Name of the Project\n
+    const __TEMPLATE__ = `##Name of the Project\n
   ------------------\n
-  ${data.nameProjectName}\n
+  ${data.nameProject}\n
   \n
   ##User Name\n
   -----------------\n
-  ${data.userName}\n
+  ${data.nameUser}\n
   \n
   ##Description of the project\n
   -----------------\n
@@ -183,10 +183,12 @@ inquirer
             `#Name of the Project \n
             ------------------ \n
             ${data.nameProjectName}\n
+            ${console.log(typeof data.nameProjectName )}
             \n
             ##User Name\n
             -----------------\n
             ${data.userName}\n
+            ${console.log(typeof data.userName )}
             \n
             ##Description of the project\n
             -----------------\n
