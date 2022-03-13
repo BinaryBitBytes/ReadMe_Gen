@@ -1,7 +1,7 @@
 console.log(process.argv);
 console.log(typeof process.argv);
 //!added node modules: Inquirer and FS
-const generateMarkdown = require("./utils/generateMarkdown.js");
+const generateMarkdown = require("./utils/MarkDown.js");
 const inquirer = require("inquirer");
 const fs = require("fs");
 
