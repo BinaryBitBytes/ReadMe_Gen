@@ -4,6 +4,7 @@ console.log(typeof process.argv);
 const inquirer = require("inquirer");
 const fs = require("fs");
 
+
 inquirer
   .prompt([
     (Questions = {
@@ -94,9 +95,10 @@ inquirer
     },
     {
       type: "list",
-      message: "What Lisences would you like to use?",
+      message: ["What Lisences would you like to use?"],//, <a src=`script.js.${projLisence}`>],
       name: "projLisence",
-      choices: ["none", "MIT"],
+      choices: ["none", "Apache License 2.0", "GNU General Public License v3.0", 'MIT License', 'Eclipse Public License 2.0', 'GNU Affero General Public License v3.0', 
+      'GNU General Public License v2.0', 'GNU Lesser General Public License v2.1','The Unlicense'],
       validate: (blankInput) => {
         if (blankInput) {
           return true;
@@ -131,16 +133,17 @@ inquirer
     //const enteredGitHub = `${data.gHubUser}`;
     //!TEMPLATE VARIABLES
     //! Writing Filename
-    const filename = `${data.nameProject}.md`;
-    fs.writeFile(filename, JSON.stringify(data, null), (err) =>
-      err ? console.log(err) : console.log(`logged file`)
-    );
-    //! Reading Filename for writing data
-    fs.readFile(filename, "utf8", (error, data) =>
-      error ? console.error(error) : console.log(data)
-    );
+    ////const filename = `${data.nameProject}.md`;
+    ////fs.writeFile(filename, JSON.stringify(`\n ${__TEMPLATE__}`, null), (err) =>
+    ////  err ? console.log(err) : console.log(`logged file`)
+    ////);
+    ///////! Reading Filename for writing data
+    /////fs.readFile(filename, "utf8", (error, data) =>
+    ////  error ? console.error(error) : console.log(data)
+    /////);
     //! TEMPLATE
-    const __TEMPLATE__ = `##Name of the Project\n
+    const __TEMPLATE__ = `\n
+  ##Name of the Project\n
   ------------------\n
   ${data.nameProject}\n
   \n
@@ -176,6 +179,14 @@ inquirer
   -----------------\n
   ${data.gHubUser}\n
   `;
+  const filename = `${data.nameProject}.md`;
+    fs.writeFile(filename, JSON.stringify(`The Official Readme for ${data.nameProject}`, null), (err) =>
+      err ? console.log(err) : console.log(`logged file`)
+    );
+    //! Reading Filename for writing data
+    fs.readFile(filename, "utf8", (error, data) =>
+      error ? console.error(error) : console.log(data)
+    );
     fs.appendFile(filename, `\n ${__TEMPLATE__}`, (err) =>
       err
         ? console.log(err)
