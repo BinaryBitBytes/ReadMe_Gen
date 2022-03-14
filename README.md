@@ -3,12 +3,12 @@
     ## Description
     This is a readme generator, you can run inquirer in node to answer the prompts to auto generate a readme file in .MD extension.
     ## Table of Contents:
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Contributing](#contributing)
-    - [Testing](#tests)
-    - [License](#license)
-    - [Questions](#questions)
+    - [Installation](#projInstallation)
+    - [Usage](#projUsage)
+    - [Contributions](#projContributions)
+    - [Testing](#projTesting)
+    - [License](#projLisence))
+    - [Questions](#gHubUser)
     ## Installation
     To install this project you can pull the project from my github. After you do this this need to run NPM - i then install inquirer and fs with npm -i inquirer and npm -i fs.
     ## Usage

@@ -1,6 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(projLisence) {
+    
     switch (projLisence) {
       case "MIT":
         return `https://img.shields.io/badge/license-MIT-green`;
@@ -49,12 +50,12 @@ function renderLicenseBadge(projLisence) {
     ## Description
     ${data.projDescription}
     ## Table of Contents:
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Contributing](#contributing)
-    - [Testing](#tests)
-    - [License](#license)
-    - [Questions](#questions)
+    - [Installation](#projInstallation)
+    - [Usage](#projUsage)
+    - [Contributions](#projContributions)
+    - [Testing](#projTesting)
+    - [License](#projLisence))
+    - [Questions](#gHubUser)
     ## Installation
     ${data.projInstallation}
     ## Usage
