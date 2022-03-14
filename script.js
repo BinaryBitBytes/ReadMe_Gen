@@ -149,8 +149,8 @@ inquirer
           : console.log(
               `#Name of the Project \n
               ------------------ \n
-              ${data.nameProjectName}\n
-              ${console.log(typeof data.nameProjectName )}
+              ${data.nameProject}\n
+              ${console.log(typeof data.nameProject)}
               \n
               ##User Name\n
               -----------------\n
