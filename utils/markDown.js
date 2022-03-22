@@ -47,8 +47,9 @@ function renderLicenseBadge(projLisence) {
   
   // TODO: Create a function to generate markdown for README
   function generateMarkdown(data) {
-    const ask =  (`## Description\n
+    const ask =  (`### Description\n
     ${data.projDescription}\n
+    ===========================
     Table of Contents:
     ------------------ \n
     * [![Installation]](#projInstallation)\n
