@@ -1,5 +1,6 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
+const paddington = require('paddington')
 function renderLicenseBadge(projLisence) {
     
     switch (projLisence) {
@@ -46,30 +47,36 @@ function renderLicenseBadge(projLisence) {
   
   // TODO: Create a function to generate markdown for README
   function generateMarkdown(data) {
-    return `# ${data.nameProject}
-    ## Description
-    ${data.projDescription}
-    ## Table of Contents:
-    - [Installation](#projInstallation)
-    - [Usage](#projUsage)
-    - [Contributions](#projContributions)
-    - [Testing](#projTesting)
-    - [License](#projLisence))
-    - [Questions](#gHubUser)
-    ## Installation
-    ${data.projInstallation}
-    ## Usage
-    ${data.projUsage}
-    ## Contributions
-    ${data.projContributions}
-    ## Testing
-    ${data.projTesting}
-    ## License
-    ### ${renderLicenseSection(data.projLisence)}
-    
-    ## Questions
-    [Github Profile](https://github.com/${data.gHubUser}) | To reach me via Email ${data.projEmail}
-  `;
+    const ask =  (`## Description\n
+    ${data.projDescription}\n
+    Table of Contents:
+    ------------------ \n
+    * [![Installation]](#projInstallation)\n
+    * [![Usage]](#projUsage)\n
+    * [![Contributions]](#projContributions)\n
+    * [![Testing]](#projTesting)\n
+    * [![License]](#projLisence))\n
+    * [![Questions]](#gHubUser)\n
+    ### Installation
+    -----------------\n
+    ${data.projInstallation}\n
+    ### Usage
+    ----------\n
+    ${data.projUsage}\n
+    ### Contributions
+    ------------------\n
+    ${data.projContributions}\n
+    ### Testing
+    ------------\n
+    ${data.projTesting}\n
+    ### License
+    ------------\n
+    ### ${renderLicenseSection(data.projLisence)}\n
+    ### Questions
+    -------------\n
+    [![Github Profile](https://github.com/${data.gHubUser})] | To reach me via Email ${data.projEmail}
+  `);
+  return(ask);
   }
   
   module.exports = generateMarkdown;
