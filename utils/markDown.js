@@ -71,7 +71,7 @@ function renderLicenseBadge(projLisence) {
     ${data.projTesting}\n
     ### License
     ------------\n
-    ### ${renderLicenseSection(data.projLisence)}\n
+    * ${renderLicenseSection(data.projLisence)}\n
     ### Questions
     -------------\n
     [![Github Profile](https://github.com/${data.gHubUser})] | To reach me via Email ${data.projEmail}
