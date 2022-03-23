@@ -1,6 +1,6 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-const paddington = require('paddington')
+const paddington = require('paddington');
 function renderLicenseBadge(projLisence) {
     
     switch (projLisence) {
@@ -49,8 +49,8 @@ function renderLicenseBadge(projLisence) {
   function generateMarkdown(data) {
     const ask =  (
 `### Description\n
-${data.projDescription}
-* ${renderLicenseSection(data.projLisence)}\n
+${data.projDescription}\n
+${renderLicenseSection(data.projLisence)}\n
 ------------------
 Table of Contents:
 ------------------ \n

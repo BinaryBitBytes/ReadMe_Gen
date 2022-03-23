@@ -136,7 +136,7 @@ inquirer
   
   .then((data) => {
     const filename = `${data.nameProject}.md`;
-      fs.writeFile(filename, JSON.stringify(`#${data.nameProject}`, null), (err) =>
+      fs.writeFile(filename,`${data.nameProject}`, null, (err) =>
         err ? console.log(err) : console.log(`logged file`)
       );
       //! Reading Filename for writing data
