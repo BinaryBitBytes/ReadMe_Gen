@@ -41,42 +41,44 @@ function renderLicenseBadge(projLisence) {
   // If there is no license, return an empty string
   function renderLicenseSection(projLisence) {
     return `![${projLisence}](${renderLicenseBadge(projLisence)})
-    ### [${renderLicenseLink(projLisence)}](${renderLicenseLink(projLisence)})
+    [${renderLicenseLink(projLisence)}](${renderLicenseLink(projLisence)})
     `;
   }
   
-  // TODO: Create a function to generate markdown for README
+  //  Create a function to generate markdown for README
   function generateMarkdown(data) {
-    const ask =  (`### Description\n
-    ${data.projDescription}\n
-    ===========================
-    Table of Contents:
-    ------------------ \n
-    * [![Installation]](#projInstallation)\n
-    * [![Usage]](#projUsage)\n
-    * [![Contributions]](#projContributions)\n
-    * [![Testing]](#projTesting)\n
-    * [![License]](#projLisence))\n
-    * [![Questions]](#gHubUser)\n
-    ### Installation
-    -----------------\n
-    ${data.projInstallation}\n
-    ### Usage
-    ----------\n
-    ${data.projUsage}\n
-    ### Contributions
-    ------------------\n
-    ${data.projContributions}\n
-    ### Testing
-    ------------\n
-    ${data.projTesting}\n
-    ### License
-    ------------\n
-    * ${renderLicenseSection(data.projLisence)}\n
-    ### Questions
-    -------------\n
-    [![Github Profile](https://github.com/${data.gHubUser})] | To reach me via Email ${data.projEmail}
-  `);
+    const ask =  (
+`### Description\n
+${data.projDescription}
+* ${renderLicenseSection(data.projLisence)}\n
+------------------
+Table of Contents:
+------------------ \n
+* [Installation](#installation)\n
+* [Usage](#usage)\n
+* [Contributions](#contributions)\n
+* [Testing](#testing)\n
+* [License](#lisence)\n
+* [Questions](#questions)\n
+### Installation
+-----------------\n
+${data.projInstallation}\n
+### Usage
+----------\n
+${data.projUsage}\n
+### Contributions
+------------------\n
+${data.projContributions}\n
+### Testing
+------------\n
+${data.projTesting}\n
+### License
+------------\n
+* ${renderLicenseSection(data.projLisence)}\n
+### Questions
+-------------\n
+[Github Profile](https://github.com/${data.gHubUser})  |  To reach me via Email ${data.projEmail}
+`);
   return(ask);
   }
   
