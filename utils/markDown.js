@@ -58,7 +58,7 @@ Table of Contents:
 * [Usage](#usage)\n
 * [Contributions](#contributions)\n
 * [Testing](#testing)\n
-* [License](#lisence)\n
+* [License](#license)\n
 * [Questions](#questions)\n
 ### Installation
 -----------------\n
@@ -66,16 +66,16 @@ ${data.projInstallation}\n
 ### Usage
 ----------\n
 ${data.projUsage}\n
-### Contributions
+### Contributions\n
 ------------------\n
 ${data.projContributions}\n
-### Testing
+### Testing\n
 ------------\n
 ${data.projTesting}\n
 ### License
 ------------\n
 * ${renderLicenseSection(data.projLisence)}\n
-### Questions
+### Questions\n
 -------------\n
 [Github Profile](https://github.com/${data.gHubUser})  |  To reach me via Email ${data.projEmail}
 `);
