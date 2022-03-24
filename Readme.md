@@ -64,4 +64,4 @@ No testing involved for this readme generator.
 
 -------------
 
-![Live Video](https://user-images.githubusercontent.com/94703967/159844303-6e6599c9-0680-4298-885d-2e17fd40e5c1.mp4)
+![Live Video] https://user-images.githubusercontent.com/94703967/159844303-6e6599c9-0680-4298-885d-2e17fd40e5c1.mp4
