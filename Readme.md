@@ -63,5 +63,10 @@ No testing involved for this readme generator.
 ### Demonstration
 
 -------------
-
 ![Live Video] https://user-images.githubusercontent.com/94703967/159844303-6e6599c9-0680-4298-885d-2e17fd40e5c1.mp4
+* You can watch the live video here with quite enjoyable elevator music.
+
+
+![ReadmeGen](https://user-images.githubusercontent.com/94703967/159844865-e4d9599a-bd91-4bcc-af9e-f3cd7e00d824.gif)
+
+
