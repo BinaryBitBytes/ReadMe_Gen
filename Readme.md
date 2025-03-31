@@ -50,7 +50,7 @@ No testing involved for this readme generator.
 ### License
 ------------
 
-* ![MIT](https://img.shields.io/badge/license-MIT-green)
+![MIT](https://img.shields.io/badge/license-MIT-green)
     [https://choosealicense.com/licenses/mit/](https://choosealicense.com/licenses/mit/)
     
 
